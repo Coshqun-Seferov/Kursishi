@@ -1,0 +1,282 @@
+/* Library Page Specific Styles */
+/* These styles complement the main style.css file */
+
+/* Library Header */
+.library-header {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.library-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.library-stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: pink;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Library Navigation */
+.library-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.library-tabs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.library-tab {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.library-tab:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.library-tab.active {
+    background-color: pink;
+    color: indigo;
+    font-weight: bold;
+}
+
+.library-sort {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.library-sort label {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.sort-select {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.sort-select:focus {
+    outline: 2px solid pink;
+}
+
+/* Playlists Section */
+.playlists-section {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.playlists-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.playlists-section h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 25px;
+    background-color: pink;
+    border-radius: 3px;
+}
+
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.playlist-card {
+    background-color: darkmagenta;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.playlist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.playlist-image {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.playlist-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.playlist-card:hover .playlist-image img {
+    transform: scale(1.05);
+}
+
+.playlist-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.playlist-card:hover .playlist-overlay {
+    opacity: 1;
+}
+
+.playlist-info {
+    padding: 15px;
+}
+
+.playlist-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.playlist-info p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.create-playlist {
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    background-color: rgba(139, 0, 139, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.create-playlist-content {
+    padding: 20px;
+}
+
+.create-icon {
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 10px;
+}
+
+.create-playlist p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.create-playlist:hover {
+    border-color: pink;
+    background-color: rgba(139, 0, 139, 0.7);
+}
+
+.create-playlist:hover .create-icon,
+.create-playlist:hover p {
+    color: pink;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .library-stats {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .library-header {
+        padding: 30px 20px;
+    }
+    
+    .library-stats {
+        gap: 20px;
+    }
+    
+    .stat-value {
+        font-size: 1.8rem;
+    }
+    
+    .library-navigation {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .library-tabs {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .library-header h1 {
+        font-size: 2rem;
+    }
+    
+    .library-stats {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .stat {
+        flex: 0 0 40%;
+        margin-bottom: 15px;
+    }
+    
+    .playlist-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+}

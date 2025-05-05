@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Music - MusicHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleupload.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">MusicHub</a>
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Search for music..." class="search-input">
+            <button class="search-button">
+                <img src="images/icons/Searchicon.png" alt="Search">
+            </button>
+        </div>
+        
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="indexlibrary.html">Library</a>
+            <a href="indexupload.html">Upload</a>
+            <a href="indexprofile.html">Profile</a>
+        </nav>
+        
+        <div class="saved-musics-icon">
+            <a href="indexsavedmusic.html">
+                <img src="images/icons/Saveicon.png" alt="Saved Musics">
+            </a>
+        </div>
+        
+        <div class="login-icon">
+            <a href="indexlogin.html">
+                <img src="images/icons/Usericon.png" alt="Login">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="upload-header">
+            <h1>Upload Your Music</h1>
+            <p>Share your tracks with the MusicHub community</p>
+        </section>
+
+        <section class="upload-section">
+            <div class="upload-container">
+                <div class="upload-area">
+                    <div class="upload-icon">⬆️</div>
+                    <h2>Drag & Drop Files Here</h2>
+                    <p>or</p>
+                    <button class="browse-btn">Browse Files</button>
+                    <p class="upload-info">Supports MP3, WAV, FLAC (up to 50MB)</p>
+                </div>
+                
+                <div class="upload-form">
+                    <h2>Track Information</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="track-title">Track Title*</label>
+                            <input type="text" id="track-title" placeholder="Enter track title" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="artist-name">Artist Name*</label>
+                            <input type="text" id="artist-name" placeholder="Enter artist name" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="genre">Genre*</label>
+                                <select id="genre" required>
+                                    <option value="" disabled selected>Select genre</option>
+                                    <option>Electronic</option>
+                                    <option>Hip Hop</option>
+                                    <option>Rock</option>
+                                    <option>Pop</option>
+                                    <option>Jazz</option>
+                                    <option>Classical</option>
+                                    <option>R&B</option>
+                                    <option>Country</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group half">
+                                <label for="release-date">Release Date</label>
+                                <input type="date" id="release-date">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="track-description">Description</label>
+                            <textarea id="track-description" placeholder="Tell us about your track"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Cover Image</label>
+                            <div class="cover-upload">
+                                <div class="cover-preview">
+                                    <img src="images/icons/Imageicon.png" alt="Cover Preview">
+                                </div>
+                                <button class="upload-cover-btn">Upload Cover</button>
+                                <p class="upload-info">JPG, PNG (1:1 ratio recommended)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="terms">
+                            <label for="terms">I confirm that I have the rights to distribute this music and agree to MusicHub's <a href="#">Terms of Service</a></label>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="upload-submit-btn">Upload Track</button>
+                            <button type="button" class="upload-cancel-btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="upload-tips">
+            <h2>Tips for a Successful Upload</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">🎵</div>
+                    <h3>Quality Matters</h3>
+                    <p>Upload high-quality audio files for the best listening experience.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🖼️</div>
+                    <h3>Eye-Catching Cover</h3>
+                    <p>Use a professional and appealing cover image to attract listeners.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">📝</div>
+                    <h3>Detailed Description</h3>
+                    <p>Provide a compelling description to help listeners discover your music.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🏷️</div>
+                    <h3>Accurate Tags</h3>
+                    <p>Use relevant genres and tags to help your music reach the right audience.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>MusicHub</h2>
+                <p>Your ultimate music destination</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <a href="indexabout.html">About Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MusicHub. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

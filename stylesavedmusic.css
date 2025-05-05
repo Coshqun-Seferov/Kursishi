@@ -1,0 +1,189 @@
+/* Saved Music Page Specific Styles */
+/* These styles complement the main style.css file */
+
+/* Saved Header */
+.saved-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.saved-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.saved-header p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Saved Navigation */
+.saved-navigation {
+    margin-bottom: 30px;
+}
+
+.saved-tabs {
+    display: flex;
+    gap: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+    overflow-x: auto;
+}
+
+.saved-tab {
+    background: none;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 10px 5px;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.saved-tab:hover {
+    color: white;
+}
+
+.saved-tab.active {
+    color: pink;
+    border-bottom-color: pink;
+    font-weight: bold;
+}
+
+/* Saved Playlists */
+.saved-playlists {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.saved-playlists h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.saved-playlists h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 25px;
+    background-color: pink;
+    border-radius: 3px;
+}
+
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.playlist-card {
+    background-color: darkmagenta;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.playlist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.playlist-image {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.playlist-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.playlist-card:hover .playlist-image img {
+    transform: scale(1.05);
+}
+
+.playlist-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.playlist-card:hover .playlist-overlay {
+    opacity: 1;
+}
+
+.playlist-info {
+    padding: 15px;
+}
+
+.playlist-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.playlist-info p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .saved-header h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .saved-header h1 {
+        font-size: 2rem;
+    }
+    
+    .saved-tabs {
+        gap: 10px;
+    }
+    
+    .playlist-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .saved-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .playlist-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .playlist-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .playlist-card {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}

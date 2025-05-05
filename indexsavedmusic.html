@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Music - MusicHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylesavedmusic.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">MusicHub</a>
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Search for music..." class="search-input">
+            <button class="search-button">
+                <img src="images/icons/Searchicon.png" alt="Search">
+            </button>
+        </div>
+        
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="indexlibrary.html">Library</a>
+            <a href="indexupload.html">Upload</a>
+            <a href="indexprofile.html">Profile</a>
+        </nav>
+        
+        <div class="saved-musics-icon">
+            <a href="indexsavedmusic.html" class="active">
+                <img src="images/icons/Saveicon.png" alt="Saved Musics">
+            </a>
+        </div>
+        
+        <div class="login-icon">
+            <a href="indexlogin.html">
+                <img src="images/icons/Usericon.png" alt="Login">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="saved-header">
+            <h1>Saved Music</h1>
+            <p>Your favorite tracks and playlists in one place</p>
+        </section>
+
+        <section class="saved-navigation">
+            <div class="saved-tabs">
+                <button class="saved-tab active">Liked Tracks</button>
+                <button class="saved-tab">Playlists</button>
+                <button class="saved-tab">Albums</button>
+                <button class="saved-tab">Artists</button>
+                <button class="saved-tab">Downloaded</button>
+            </div>
+        </section>
+
+        <section class="music-collection">
+            <div class="section-header">
+                <h2>Liked Tracks</h2>
+                <div class="view-options">
+                    <button class="view-btn active">Grid</button>
+                    <button class="view-btn">List</button>
+                </div>
+            </div>
+            
+            <div class="cards-container">
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="card-image-container">
+                        <img src="images/music/Boosted.jpg" alt="Music Cover" class="card-image">
+                        <div class="play-overlay">
+                            <button class="play-button">▶</button>
+                        </div>
+                    </div>
+                    <div class="music-info">
+                        <div class="left">
+                            <p class="music-name">Boosted</p>
+                            <p class="music-author">DJ Boost</p>
+                        </div>
+                        <div class="right">
+                            <p class="music-time">3:45</p>
+                            <p class="audio-details">MP3 • 3.5 MB</p>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn add-to-playlist">+ Add to Playlist</button>
+                        <button class="action-btn download">Download</button>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="card-image-container">
+                        <img src="images/music/Bowsy.jpg" alt="Music Cover" class="card-image">
+                        <div class="play-overlay">
+                            <button class="play-button">▶</button>
+                        </div>
+                    </div>
+                    <div class="music-info">
+                        <div class="left">
+                            <p class="music-name">Bowsy</p>
+                            <p class="music-author">DJ Bows</p>
+                        </div>
+                        <div class="right">
+                            <p class="music-time">4:00</p>
+                            <p class="audio-details">MP3 • 4.0 MB</p>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn add-to-playlist">+ Add to Playlist</button>
+                        <button class="action-btn download">Download</button>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="card-image-container">
+                        <img src="images/music/cyyxx66.jpg" alt="Music Cover" class="card-image">
+                        <div class="play-overlay">
+                            <button class="play-button">▶</button>
+                        </div>
+                    </div>
+                    <div class="music-info">
+                        <div class="left">
+                            <p class="music-name">Cyyxx66</p>
+                            <p class="music-author">DJ Cyyxx</p>
+                        </div>
+                        <div class="right">
+                            <p class="music-time">3:30</p>
+                            <p class="audio-details">MP3 • 3.2 MB</p>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn add-to-playlist">+ Add to Playlist</button>
+                        <button class="action-btn download">Download</button>
+                    </div>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="card">
+                    <div class="card-image-container">
+                        <img src="images/music/Death666.jpg" alt="Music Cover" class="card-image">
+                        <div class="play-overlay">
+                            <button class="play-button">▶</button>
+                        </div>
+                    </div>
+                    <div class="music-info">
+                        <div class="left">
+                            <p class="music-name">Death666</p>
+                            <p class="music-author">DJ Death</p>
+                        </div>
+                        <div class="right">
+                            <p class="music-time">4:15</p>
+                            <p class="audio-details">MP3 • 4.5 MB</p>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn add-to-playlist">+ Add to Playlist</button>
+                        <button class="action-btn download">Download</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="saved-playlists">
+            <h2>Your Saved Playlists</h2>
+            <div class="playlist-grid">
+                <div class="playlist-card">
+                    <div class="playlist-image">
+                        <img src="images/music/Podzemniiy.jpg" alt="Workout Playlist">
+                        <div class="playlist-overlay">
+                            <button class="play-button">▶</button>
+                        </div>
+                    </div>
+                    <div class="playlist-info">
+                        <h3>Workout Mix</h3>
+                        <p>42 tracks • 2h 35m</p>
+                    </div>
+                </div>
+                <div class="playlist-card">
+                    <div class="playlist-image">
+                        <img src="images/music/Berserk.jpg" alt="Chill Playlist">
+                        <div class="playlist-overlay">
+                            <button class="play-button">▶</button>
+                        </div>
+                    </div>
+                    <div class="playlist-info">
+                        <h3>Chill Vibes</h3>
+                        <p>28 tracks • 1h 47m</p>
+                    </div>
+                </div>
+                <div class="playlist-card">
+                    <div class="playlist-image">
+                        <img src="images/music/Stphonk.jpg" alt="Party Playlist">
+                        <div class="playlist-overlay">
+                            <button class="play-button">▶</button>
+                        </div>
+                    </div>
+                    <div class="playlist-info">
+                        <h3>Party Time</h3>
+                        <p>35 tracks • 2h 10m</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>MusicHub</h2>
+                <p>Your ultimate music destination</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <a href="indexabout.html">About Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MusicHub. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Music Player (Fixed at bottom) -->
+    <div class="music-player">
+        <div class="now-playing">
+            <img src="images/music/Boosted.jpg" alt="Now Playing" class="now-playing-img">
+            <div class="now-playing-info">
+                <p class="now-playing-title">Boosted</p>
+                <p class="now-playing-artist">DJ Boost</p>
+            </div>
+        </div>
+        
+        <div class="player-controls">
+            <button class="control-btn shuffle">⇄</button>
+            <button class="control-btn previous">◀◀</button>
+            <button class="control-btn play-pause">▶</button>
+            <button class="control-btn next">▶▶</button>
+            <button class="control-btn repeat">↻</button>
+            
+            <div class="progress-container">
+                <span class="current-time">0:00</span>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <span class="total-time">4:03</span>
+            </div>
+            <div class="player-actions">
+                <button class="action-btn add-to-playlist">+ Add to Playlist</button>
+                <button class="action-btn download">Download</button>
+            </div>
+        </div>
+        
+        <div class="player-options">
+            <button class="option-btn volume">🔊</button>
+            <div class="volume-slider">
+                <div class="volume-progress"></div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
